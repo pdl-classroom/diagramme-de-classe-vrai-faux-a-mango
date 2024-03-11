@@ -1,0 +1,22 @@
+@startuml "class_diagram"
+skinparam nodesep 60
+skinparam classAttributeIconSize 0
+skinparam groupInheritance 2
+skinparam linetype polyline
+hide empty methods
+hide empty members
+
+
+class Professeur
+class Discipline
+class Cours
+class Etudiant
+
+<> diamond
+
+Professeur "1" -- diamond
+Discipline "1" -- diamond
+Cours "1" -u- diamond
+Etudiant "5..30" ---l---- "*" Cours
+
+@enduml
